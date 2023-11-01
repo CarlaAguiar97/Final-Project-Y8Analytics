@@ -1,0 +1,72 @@
+
+/*GENERAL STYLE*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+body{
+    background-color: #061551;
+    height: 100vh;
+}
+
+header .logo h1{
+    font-size: 22px;
+    font-family: 'Poppins', sans-serif;
+    color: #061551;
+    background-color: #F2F7FF;
+    padding: 20px 50px;
+    font-weight: bold;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* HEADER STYLE */
+ header > .interface{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+} 
+
+header a{
+    color: #fff;
+    text-decoration: none;  
+    margin-left: 90px;
+    display: inline-block;
+    transition: .2s;
+} 
+
+header a:hover{
+    color: #824EFE;
+   transform: scale(1.04);
+} 
+
+header nav ul{
+    list-style-type: none ;
+    /* margin-left: 50px; */
+    
+}
+
+ header nav ul li {
+    display: inline-block;
+} 
+
+header .btn-contact button{
+    padding: 6px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #824EFE;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+header .btn-contact button:hover{
+    box-shadow: 0px 0px 8px #834efea5;
+}

@@ -13,60 +13,119 @@ body{
     height: 100vh;
 }
 
-header .logo h1{
-    font-size: 22px;
-    font-family: 'Poppins', sans-serif;
-    color: #061551;
-    background-color: #F2F7FF;
-    padding: 20px 50px;
-    font-weight: bold;
-}
-
 .interface{
     max-width: 1280px;
-    margin: 0 auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 60px;
+    background-color: #061551;
+}
+
+/* LOGO STYLE */
+.logo{
+    background-color: #F2F7FF;
+    padding: 20px 60px;
+}
+
+.logo h1{
+    color: #061551;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 /* HEADER STYLE */
- header > .interface{
+header{
+    padding: 0px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/* header.scrolling{
+    background-color: #061551;
+}
+
+header.scrolling a{
+    color: #fff;
+} */
+
+header > .interface{
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
-} 
+    justify-content: space-between;
+}
 
 header a{
-    color: #fff;
-    text-decoration: none;  
-    margin-left: 90px;
-    display: inline-block;
-    transition: .2s;
-} 
+    color: #fff; /*mudando a cor da lista do cabeçalho*/
+    text-decoration: none; /*tirar o sublinhado da lista do cabeçalho*/
+    display: inline-block; /*necessario p/ o funcionamento do zoom ao passar o mouse em cima do header*/
+    transition: .2s; /*tempo de transiçao do zoom*/
+}
 
 header a:hover{
     color: #824EFE;
-   transform: scale(1.04);
-} 
-
-header nav ul{
-    list-style-type: none ;
-    /* margin-left: 50px; */
-    
+    transform: scale(1.04);
 }
 
- header nav ul li {
+header nav ul{
+    list-style: none; /*removendo as bolinhas da lista do cabeçalho*/
+}
+
+header nav ul li{
     display: inline-block;
-} 
+    padding: 0 30px; /*espaçamento entre os itens da lista do cabeçalho*/
+}
 
 header .btn-contact button{
-    padding: 6px 20px;
+    padding: 5px 25px;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 660;
     background-color: #824EFE;
-    border: 0;
+    border: none;
     border-radius: 30px;
     cursor: pointer;
+    position: static;
+    color:#061551;
 }
 
 header .btn-contact button:hover{
-    box-shadow: 0px 0px 8px #834efea5;
+    box-shadow: 0px 0px 8px #834efeb1;
+    color: #fff;
+}
+
+/* VIDEO SECTION STYLE */
+.banner{
+    height: 200vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner .video-bg{
+    height: 10vh;
+    filter: opacity(0.15);
+    margin-top: 70px;
+    /* position: fixed; */
+}
+
+.banner h1{
+    color: #fff;
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center
+} 
+.banner span{
+    color: #824EFE;
+}
+
+.banner h2{
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center
 }

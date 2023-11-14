@@ -1,131 +1,121 @@
-
-/*GENERAL STYLE*/
-*{
+/* GENERAL STYLE */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
+    list-style: none;
+    font-family: 'Wix Madefor Text', sans-serif;
 }
 
-body{
-    background-color: #061551;
-    height: 100vh;
+html {
+    scroll-behavior: smooth;
+  }
+
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
 }
 
-.interface{
-    max-width: 1280px;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-right: 60px;
-    background-color: #061551;
+a:hover {
+    transition: 0.2s ease-in-out;
+    color: #844DFE;
 }
 
-/* LOGO STYLE */
-.logo{
-    background-color: #F2F7FF;
-    padding: 20px 60px;
-}
-
-.logo h1{
-    color: #061551;
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-}
-
-/* HEADER STYLE */
-header{
-    padding: 0px;
+/* HEADER */
+.headerContainer {
     width: 100%;
+    height: 80px;
+    display: flex;
+    background-color: #071550;
     position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
+    z-index: 999;
 }
 
-/* header.scrolling{
-    background-color: #061551;
-}
+.headerLogo {
+    min-width: 206px;
+    height: 80px;
+    background-color: #F2F7FF;
 
-header.scrolling a{
-    color: #fff;
-} */
-
-header > .interface{
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
+
+    color: #071451;
+    font-size: 20px;
+    font-weight: bold;
 }
 
-header a{
-    color: #fff; /*mudando a cor da lista do cabeçalho*/
-    text-decoration: none; /*tirar o sublinhado da lista do cabeçalho*/
-    display: inline-block; /*necessario p/ o funcionamento do zoom ao passar o mouse em cima do header*/
-    transition: .2s; /*tempo de transiçao do zoom*/
+.headerContent {
+    width: 100%;
+    background-color: #071550;
+    display: flex;
+    justify-content: end;
+    align-items: center;
 }
 
-header a:hover{
-    color: #824EFE;
-    transform: scale(1.04);
+.headerContent ul {
+    display: flex;
 }
 
-header nav ul{
-    list-style: none; /*removendo as bolinhas da lista do cabeçalho*/
-}
-
-header nav ul li{
-    display: inline-block;
-    padding: 0 30px; /*espaçamento entre os itens da lista do cabeçalho*/
-}
-
-header .btn-contact button{
-    padding: 5px 25px;
+.headerContent ul li {
+    margin-right: 50px;
+    color: #fff;
     font-size: 16px;
-    font-weight: 660;
-    background-color: #824EFE;
-    border: none;
-    border-radius: 30px;
+    font-weight: 700;
     cursor: pointer;
-    position: static;
-    color:#061551;
+    transition: 0.2s ease-in-out;
 }
 
-header .btn-contact button:hover{
-    box-shadow: 0px 0px 8px #834efeb1;
+.headerContent ul li:hover {
+    color: RGB(132, 77, 254);
+    transition: 0.2s ease-in-out;
+}
+
+.menu {
+    font-size: 20px;
+    display: none;
     color: #fff;
+    margin-right: 20px;
+    cursor: pointer;
 }
 
-/* VIDEO SECTION STYLE */
-.banner{
-    height: 200vh;
-    background-position: center;
-    background-repeat: no-repeat;
+/* HOME */
+
+.main {
+    width: 100%;
+    height: 100%;
+    margin-top: 80px;
+}
+
+.back-image, .backgroundBlack {
+    width: 100%;
+    height: 700px;
+}
+
+.back-image {
+    background-image: url(assets/background.jpg);
     background-size: cover;
+    background-position: center;
+    position: absolute;
+    z-index: 9;
 }
 
-.banner .video-bg{
-    height: 10vh;
-    filter: opacity(0.15);
-    margin-top: 70px;
-    /* position: fixed; */
-}
-
-.banner h1{
-    color: #fff;
-    font-size: 50px;
-    font-family: 'Poppins', sans-serif;
+.backgroundBlack {
+    background-color: rgba(6,20,81,0.7);
+    position: relative;
+    z-index: 10;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: center
-} 
-.banner span{
-    color: #824EFE;
+    font-weight: bold;
+    color: #fff;
 }
 
-.banner h2{
-    color: #fff;
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center
+.parag {
+    text-align: center;
+    font-size: 60px;
 }

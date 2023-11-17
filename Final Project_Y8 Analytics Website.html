@@ -34,7 +34,7 @@
         </div>
     </header>
 
-     <!-- Video with Title -->
+     <!-- Image with Title -->
 
      <section id="main" class="main">
         <div class="back-image"></div>
@@ -107,6 +107,101 @@
         </div>
     </section>
 
+    <!-- Dashboards -->
+    <section id="section-dashboards" class="dashboards-container">
+        <h1>Dashboards</h1>
+
+        <div class="dashboards">
+            <section class="sec-dash1">
+                <div class="dash1">
+                    <iframe class="frame1" title="MyLab" src="https://app.powerbi.com/view?r=eyJrIjoiZTYzNmRiOWItYzNlMC00OWJlLWI3NDMtMmY3YmRiNzhhMWMyIiwidCI6ImQxOTdhM2EyLWYyZjAtNGFjYS1hZWFmLWYzNGUwMTkyM2MwYiJ9" frameborder="0" allowFullScreen="true"></iframe>
+                </div>
+                <button id="downloadButton">Extrair Dados</button>
+            </section>
+
+            <section class="sec-dash2">
+                <div class="dash2">
+                    <iframe class="frame2" title="Report Section" src="https://app.powerbi.com/view?r=eyJrIjoiMjJlMTdlNzAtYmU5NS00YjE2LTg5MzUtNmIwNjM1YzBiNzQyIiwidCI6ImQxOTdhM2EyLWYyZjAtNGFjYS1hZWFmLWYzNGUwMTkyM2MwYiJ9" frameborder="0" allowFullScreen="true"></iframe>
+                </div>
+                <button id="downloadButton2">Extrair Dados</button>
+            </section>
+        </div>
+    </section>
+
+    <!-- JS Script -->
+    <script>
+        document.getElementById("downloadButton").addEventListener("click", function() {
+            // Crie os dados da planilha
+            var data = [
+                ["Nome", "Idade", "Email"],
+                ["João", 30, "joao@example.com"],
+                ["Maria", 25, "maria@example.com"],
+                ["Carlos", 35, "carlos@example.com"]
+            ];
+        
+            // Crie um objeto Blob que contém os dados da planilha no formato Excel
+            var blob = new Blob([arrayToCSV(data)], { type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" });
+        
+            // Crie uma URL temporária para o Blob
+            var url = window.URL.createObjectURL(blob);
+        
+            // Crie um elemento de link para fazer o download
+            var a = document.createElement("a");
+            a.href = url;
+            a.download = "planilha_excel.xlsx";
+            
+            // Simule o clique no link para iniciar o download
+            a.click();
+        
+            // Libere a URL temporária
+            window.URL.revokeObjectURL(url);
+        });
+
+        function resetForm() {
+      // Pode adicionar outras lógicas aqui antes do reset se necessário
+      setTimeout(function() {
+        document.getElementById('contactForm').reset();
+        alert('Formulário resetado após envio');
+      }, 0); // Definido como 0 para ser executado no próximo ciclo de eventos
+      return true; // Isso permite que o formulário continue com o envio após o reset
+    }
+
+        document.getElementById("downloadButton2").addEventListener("click", function() {
+            // Crie os dados da planilha
+            var data = [
+                ["Nome", "Idade", "Email"],
+                ["João", 30, "joao@example.com"],
+                ["Maria", 25, "maria@example.com"],
+                ["Carlos", 35, "carlos@example.com"]
+            ];
+        
+            // Crie um objeto Blob que contém os dados da planilha no formato Excel
+            var blob = new Blob([arrayToCSV(data)], { type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" });
+        
+            // Crie uma URL temporária para o Blob
+            var url = window.URL.createObjectURL(blob);
+        
+            // Crie um elemento de link para fazer o download
+            var a = document.createElement("a");
+            a.href = url;
+            a.download = "planilha_excel.xlsx";
+            
+            // Simule o clique no link para iniciar o download
+            a.click();
+        
+            // Libere a URL temporária
+            window.URL.revokeObjectURL(url);
+        });
+        
+        // Função para converter uma matriz em formato CSV
+        function arrayToCSV(data) {
+            var csv = "";
+            for (var row of data) {
+                csv += row.join(",") + "\n";
+            }
+            return csv;
+        }
+        </script>
 
     
 </body>

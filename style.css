@@ -221,3 +221,83 @@ a:hover {
     width: 400px;
     line-height: 30px;
 }
+
+/* DASHBOARDS */
+.dashboards-container {
+    width: 100%;
+    height: 100%;
+    background-color: F2F7FF;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dashboards-container h1 {
+    margin: 50px 0px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #061451;
+}
+
+.dashboards {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dash1, .dash2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: transparent;
+}
+
+.sec-dash1, .sec-dash2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sec-dash1 button, .sec-dash2 button {
+    margin: 20px;
+    width: 150px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    overflow: none;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    cursor: pointer;
+    background-color: #844DFE;
+    transition: 0.2s ease-in-out;
+}
+
+.sec-dash1 button:hover, .sec-dash2 button:hover {
+    transition: 0.2s ease-in-out;
+    background-color: #fff;
+    color: #844DFE;
+}
+
+
+.dash1 {
+    margin-right: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.dash2 {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.frame1, .frame2 {
+    width: 800px;
+    height: 510px;
+}

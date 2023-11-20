@@ -137,6 +137,39 @@
         </div>
     </section>
 
+    <!-- Contact us -->
+    <section id="contact-container" class="contact-container">
+        <div class="contact-img"></div>
+
+        <div class="contact-content">
+            <h1>Contact us</h1>
+
+            <div class="form-contact">
+                <form
+                action="https://formspree.io/f/mrgwdvpw"
+                method="POST"
+                onsubmit="resetForm()"
+                >
+                <div class="grid">
+                    <label class="label-email">
+                        Your E-mail:
+                    </label>
+                    <input required type="email" name="email">
+                </div>
+                <br>
+                <div class="grid">
+                    <label>
+                        Your Message:
+                    </label>
+                    <textarea required name="message"></textarea>
+                </div>
+                <!-- your other form fields go here -->
+                <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <!-- JS Script -->
     <script>
         document.getElementById("downloadButton").addEventListener("click", function() {

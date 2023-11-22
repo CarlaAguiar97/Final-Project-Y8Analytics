@@ -123,7 +123,7 @@
         <div class="dashboards">
             <section class="sec-dash1">
                 <div class="dash1">
-                    <iframe class="frame1" title="MyLab" src="https://app.powerbi.com/view?r=eyJrIjoiZTYzNmRiOWItYzNlMC00OWJlLWI3NDMtMmY3YmRiNzhhMWMyIiwidCI6ImQxOTdhM2EyLWYyZjAtNGFjYS1hZWFmLWYzNGUwMTkyM2MwYiJ9" frameborder="0" allowFullScreen="true"></iframe>
+                    <iframe class="frame1" title="MyLab" src="https://app.powerbi.com/view?r=eyJrIjoiYzY0MGYzODYtNGYxNC00MjlkLWJhNzUtYmI3MmRlZDdjMzIyIiwidCI6ImQxOTdhM2EyLWYyZjAtNGFjYS1hZWFmLWYzNGUwMTkyM2MwYiJ9" frameborder="0" allowFullScreen="true"></iframe>
                 </div>
                 <button id="downloadButton">Extract Data</button>
             </section>
@@ -170,7 +170,7 @@
         </div>
     </section>
 
-    <!-- FOOT -->
+    <!-- Foot -->
     <section class="rodape-container">
         <div class="rodape-images">
             <a href="https://www.linkedin.com/in/carla-barbosa-aguiar/" target="_blank">
@@ -189,29 +189,85 @@
     <!-- JS Script -->
     <script>
         document.getElementById("downloadButton").addEventListener("click", function() {
-            // Crie os dados da planilha
+            // Excel sheet Data
             var data = [
-                ["Nome", "Idade", "Email"],
-                ["João", 30, "joao@example.com"],
-                ["Maria", 25, "maria@example.com"],
-                ["Carlos", 35, "carlos@example.com"]
+                ["Appointment_ID", "Appointment_Date", "Appointment_Time","Qty_Item","Price","Procedure","HealthInsurance","Recepcionist"],
+                [1001, "2023-07-01", "9:27:03 AM" ,1, 3000, "Tomography", "Unimed", "Mary"],
+                [1102, "2023-07-01", "6:39:01 AM" ,1, 3000, "Tomography", "Unimed", "Mary"],
+                [1203, "2023-07-03", "7:40:46 AM" ,1, 3000, "Tomography", "Unimed", "Mary"],
+                [1304, "2023-07-03", "7:53:15 AM" ,1, 3000, "Tomography", "Unimed", "Mary"],
+                [1405, "2023-07-03", "8:15:42 AM" ,1, 3000, "Tomography", "Unimed", "Mary"],
+                [1506, "2023-07-03", "10:25:23 AM" ,1, 3000, "Tomography", "Unimed", "Mary"],
+                [1607, "2023-07-06", "7:38:38 AM" ,1, 3000, "Tomography", "Unimed", "Mary"],
+                [1708, "2023-07-06", "10:06:58 AM" ,1, 3000, "Tomography", "Unimed", "Mary"],
+                [1809, "2023-07-08", "7:38:17 AM" ,1, 200, "Blood Test", "Unimed", "Mary"],
+                [1910, "2023-07-08", "8:39:46 AM" ,1, 200, "Blood Test", "Unimed", "Joseph"],
+                [2011, "2023-07-08", "9:52:26 AM" ,1, 200, "Blood Test", "Unimed", "Joseph"],
+                [2112, "2023-07-09", "10:26:31 AM" ,1, 200, "Blood Test", "Unimed", "Joseph"],
+                [2213, "2023-07-09", "7:24:25 AM" ,1, 200, "Blood Test", "Unimed", "Joseph"],
+                [2314, "2023-07-10", "7:38:46 AM" ,1, 200, "Blood Test", "Unimed", "Joseph"],
+                [2415, "2023-07-10", "8:41:44 AM" ,1, 200, "Blood Test", "Unimed", "Joseph"],
+                [2516, "2023-07-10", "8:12:06 AM" ,1, 200, "Blood Test", "Unimed", "Joseph"],
+                [2617, "2023-07-10", "10:26:53 AM" ,1, 700, "Abdominal Ultrasound", "Unimed", "Joseph"],
+                [2718, "2023-07-10", "7:08:31 AM" ,1, 700, "Abdominal Ultrasound", "Hapvida", "Joseph"], 
+                [2819, "2023-07-12", "7:45:47 AM" ,1, 700, "Abdominal Ultrasound", "Hapvida", "Joseph"],
+                [2920, "2023-09-01", "9:31:17 AM" ,1, 700, "Abdominal Ultrasound","Hapvida", "Anna"],
+                [3021, "2023-09-01", "10:32:56 AM" ,1, 700, "Abdominal Ultrasound", "Hapvida", "Anna"],
+                [3122, "2023-09-01", "7:07:49 AM" ,1, 700, "Abdominal Ultrasound", "Hapvida", "Anna"],
+                [3223, "2023-09-04", "7:29:59 AM" ,1, 700, "Abdominal Ultrasound", "Hapvida", "Anna"],
+                [3324, "2023-09-04", "7:41:50 AM" ,1, 700, "Abdominal Ultrasound", "Hapvida", "Anna"],
+                [3425, "2023-09-06", "8:00:36 AM" ,1, 900, "X-ray", "Hapvida", "Anna"],
+                [3526, "2023-09-10", "8:17:29 AM" ,1, 900, "X-ray", "Hapvida", "Anna"], 
+                [3627, "2023-09-10", "9:41:02 AM" ,1, 900, "X-ray", "Hapvida", "Anna"],
+                [3728, "2023-09-10", "7:26:07 AM" ,1, 900, "X-ray", "Hapvida", "Anna"],
+                [3829, "2023-09-17", "8:36:07 AM" ,1, 900, "X-ray", "Hapvida", "Anna"],
+                [3930, "2022-07-12", "9:07:58 AM" ,1, 900, "X-ray", "Hapvida", "Krista"],
+                [4031, "2022-07-14", "9:19:43 AM" ,1, 900, "X-ray", "Hapvida","Krista"],
+                [4132, "2022-07-16", "8:15:24 AM" ,1, 900, "X-ray", "Hapvida", "Krista"],
+                [4233, "2022-07-16", "10:28:38 AM" ,1, 90, "Urinalisys", "Hapvida","Krista"],
+                [4334, "2022-07-16", "7:33:12 AM" ,1, 90, "Urinalisys", "Hapvida","Krista"],
+                [4435, "2022-07-18", "7:48:42 AM" ,1, 90, "Urinalisys", "Hapvida", "Krista"],
+                [4536, "2022-07-18", "8:07:18 AM" ,1, 90, "Urinalisys", "Hapvida", "Krista"],
+                [4637, "2022-07-20", "8:41:29 AM" ,1, 90, "Urinalisys", "Hapvida", "Krista"],
+                [4738, "2022-07-22", "8:52:11 AM" ,1, 90, "Urinalisys", "Hapvida", "Krista"],
+                [4839, "2022-07-22", "7:07:08 AM" ,1, 90, "Urinalisys", "Hapvida", "Krista"],
+                [4940, "2022-08-11", "7:51:29 AM" ,1, 90, "Urinalisys", "Hapvida", "Mary"],
+                [5041, "2022-08-11", "8:06:28 AM" ,1, 90, "Urinalisys", "Amil", "Mary"],
+                [5142, "2022-08-07", "8:18:19 AM" ,1, 40, "Blood Pressure", "Amil", "Mary"],
+                [5243, "2022-08-07", "8:55:36 AM" ,1, 40, "Blood Pressure", "Amil", "Mary"],
+                [5344, "2022-08-07", "9:23:40 AM" ,1, 40, "Blood Pressure", "Amil", "Mary"],
+                [5445, "2022-08-12", "7:47:25 AM" ,1, 40, "Blood Pressure", "Amil", "Joseph"],
+                [5546, "2022-08-13", "10:29:28 AM" ,1, 40, "Blood Pressure", "Amil", "Joseph"],
+                [5647, "2022-08-13", "7:09:34 AM" ,1, 40, "Blood Pressure", "Amil", "Joseph"],
+                [5748, "2022-08-19", "8:25:28 AM" ,1, 40, "Blood Pressure", "Amil", "Joseph"],
+                [5849, "2022-08-21", "10:31:30 AM" ,1, 40, "Blood Pressure", "Amil", "Joseph"],
+                [5950, "2022-08-23", "6:57:01 AM" ,1, 40, "Blood Pressure", "Amil", "Anna"],
+                [6051, "2022-08-23", "7:48:10 AM" ,1, 500, "Skin Sature", "Amil", "Anna"],
+                [6152, "2022-08-23", "8:16:53 AM" ,1, 500,"Skin Sature", "Amil", "Anna"],
+                [6253, "2022-08-25", "9:32:21 AM" ,1, 500, "Skin Sature", "Amil", "Anna"],
+                [6354, "2022-08-25", "8:48:19 AM",1, 500, "Skin Sature", "Amil", "Anna"],
+                [6455, "2022-08-26", "7:25:53 AM" ,1, 500, "Skin Sature", "Amil", "Krista"],
+                [6556, "2022-08-26", "7:54:18 AM" ,1, 500, "Skin Sature", "Amil", "Krista"],
+                [6657, "2022-08-26", "8:28:12 AM" ,1, 500, "Skin Sature", "Amil", "Krista"],
+                [6758, "2022-08-28", "8:41:37 AM" ,1, 500, "Skin Sature", "Amil", "Krista"],
+
             ];
         
-            // Crie um objeto Blob que contém os dados da planilha no formato Excel
+            // Create a Blob object that contains the spreadsheet data in Excel format
             var blob = new Blob([arrayToCSV(data)], { type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" });
         
-            // Crie uma URL temporária para o Blob
+            // Create a temporary URL for the Blob
             var url = window.URL.createObjectURL(blob);
         
-            // Crie um elemento de link para fazer o download
+            // Create a link element to download
             var a = document.createElement("a");
             a.href = url;
-            a.download = "planilha_excel.xlsx";
+            a.download = "excel_sheet.csv";
             
-            // Simule o clique no link para iniciar o download
+            // Simulate the click on the link to start the download
             a.click();
         
-            // Libere a URL temporária
+            // Release the temporary URL
             window.URL.revokeObjectURL(url);
         });
 
@@ -242,7 +298,7 @@
             // Crie um elemento de link para fazer o download
             var a = document.createElement("a");
             a.href = url;
-            a.download = "planilha_excel.xlsx";
+            a.download = "excel_sheet.csv";
             
             // Simule o clique no link para iniciar o download
             a.click();

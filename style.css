@@ -286,15 +286,17 @@ a:hover {
     font-size: 16px;
     font-weight: 500;
 
+    color: #fff;
+    font-weight: bold;
     cursor: pointer;
-    background-color: #844DFE;
+    background-color: #844DFE; 
     transition: 0.2s ease-in-out;
 }
 
 .sec-dash1 button:hover, .sec-dash2 button:hover {
     transition: 0.2s ease-in-out;
-    background-color: #fff;
-    color: #844DFE;
+    background-color:  #854dfe90;
+    color: #061451;
 }
 
 
@@ -448,4 +450,56 @@ a:hover {
 
 .create {
     color: #fff;
+}
+
+/* test */
+@media screen and (max-width: 900px) {
+    .headerContent ul {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .parag {
+        font-size: 40px;
+        margin: 0px 10px;
+    }
+
+    .section-about-container {
+        flex-wrap: wrap;
+    }
+
+    .section-about-container:nth-child(1) {
+        margin-bottom: 50px;
+    }
+    
+    .frame1, .frame2 {
+        width: 300px;
+        height: 230px;
+    }
+
+    .service-item, .service-item-reverse {
+        flex-wrap: wrap;
+    }
+
+    .service-item img, .service-item-reverse img {
+        background-size: cover;
+        background-position: center;
+        width: 250px;
+        height: 250px;
+        margin: 0px 0px;
+    }
+
+    .service-content {
+        word-break: break-all;
+        text-align: center;
+    }
+
+    .service-content p {
+        word-break: break-all;
+        text-align: center;
+        width: 100%;
+    }
 }

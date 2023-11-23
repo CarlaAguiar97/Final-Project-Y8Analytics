@@ -161,7 +161,7 @@ a:hover {
 
 .about-item {
     width: 100%;
-    margin: 20px 20px 20px 20px;
+    margin: 0px 20px 0px 10px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -170,7 +170,7 @@ a:hover {
     }
 
     .about-item {
-        padding: 0px 15px;
+        padding: 0px 20px;
     }
 }
 
@@ -525,7 +525,7 @@ a:hover {
     }
 
     .about-item:nth-child(2) {
-        margin: 100px 10px 0px 10px;
+        margin: 100px 10px 0px 0px;
     }
 
     .dashboards {

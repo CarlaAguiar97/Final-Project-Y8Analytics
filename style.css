@@ -123,6 +123,7 @@ a:hover {
 .section-about {
     position: relative;
     height: 100%;
+    scroll-margin-block-start: 110px;
 }
 
 .section-about-container {
@@ -179,6 +180,7 @@ a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    scroll-margin-block-start: 80px;
 }
 
 .service-container h1 {
@@ -234,7 +236,7 @@ a:hover {
 
 /* DASHBOARDS */
 .dashboards-container {
-    width: 50%;
+    width: 100%;
     height: 100%;
     background-color: F2F7FF;
 
@@ -242,6 +244,8 @@ a:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    scroll-margin-block-start: 80px;
 }
 
 .dashboards-container h1 {
@@ -299,7 +303,6 @@ a:hover {
     color: #061451;
 }
 
-
 .dash1 {
     margin-right: 50px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
@@ -317,6 +320,8 @@ a:hover {
 /* CONTACT US */
 .contact-container {
     position: relative;
+
+    scroll-margin-block-start: 80px;
 }
 
 .contact-img {
@@ -342,7 +347,6 @@ a:hover {
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-
     color: #fff;
 }
 
@@ -501,5 +505,28 @@ a:hover {
         word-break: break-all;
         text-align: center;
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    /* .section-about-container {
+        flex-wrap: wrap;
+        height: 100%;
+    } */
+
+    .about-item {
+        margin-top: 100px;
+    }
+
+    .about-item:nth-child(2) {
+        margin: 100px 10px 0px 10px;
+    }
+
+    .dashboards {
+        flex-wrap: wrap;
+    }
+
+    .dash1 {
+        margin-right: 0px;
     }
 }

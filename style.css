@@ -524,9 +524,9 @@ a:hover {
         margin-top: 100px;
     }
 
-    .about-item:nth-child(2) {
+    /* .about-item:nth-child(2) {
         margin: 100px 10px 0px 0px;
-    }
+    } */
 
     .dashboards {
         flex-wrap: wrap;

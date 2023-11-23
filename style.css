@@ -137,10 +137,15 @@ a:hover {
 
     text-align: center;
     margin-top: 60px;
+    padding: 0 40px;
 }
 
 .textarea-content {
     height: 200px;
+}
+
+.textarea-content >p {
+    text-align: justify;
 }
 
 .rocket-img, .user-img, .data-img {
@@ -156,7 +161,7 @@ a:hover {
 
 .about-item {
     width: 100%;
-    margin: 20px 20px 10px 0px;
+    margin: 20px 20px 15px 15px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -295,6 +300,7 @@ a:hover {
     cursor: pointer;
     background-color: #844DFE; 
     transition: 0.2s ease-in-out;
+    ;
 }
 
 .sec-dash1 button:hover, .sec-dash2 button:hover {
@@ -313,8 +319,8 @@ a:hover {
 }
 
 .frame1, .frame2 {
-    width: 700px;
-    height: 400px;
+    width: 800px;
+    height: 510px;
 }
 
 /* CONTACT US */
@@ -456,7 +462,7 @@ a:hover {
     color: #fff;
 }
 
-/* test */
+/* @MEDIA */
 @media screen and (max-width: 900px) {
     .headerContent ul {
         display: none;

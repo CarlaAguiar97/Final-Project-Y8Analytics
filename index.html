@@ -28,11 +28,21 @@
                 <li><a href="#section-dashboards">Dashboards</a></li>
                 <li><a href="#contact-container">Contact us</a></li>
             </ul>
-            <div class="menu">
+            <div class="menu" id="toggleSidebar">
                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" height="30" width="30" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
             </div>
         </div>
     </header>
+
+    <div id="sidebar">
+        <ul>
+            <li><a href="#main">Home</a></li>
+            <li><a href="#section-about">About us</a></li>
+            <li><a href="#services-container">Services</a></li>
+            <li><a href="#section-dashboards">Dashboards</a></li>
+            <li><a href="#contact-container">Contact us</a></li>
+        </ul>
+      </div>
 
      <!-- Image with Title -->
 
@@ -189,7 +199,7 @@
     <!-- JS Script -->
     <script>
         document.getElementById("downloadButton").addEventListener("click", function() {
-            // Excel sheet Data
+            // Create data for excel sheet
             var data = [
                 ["Appointment_ID", "Appointment_Date", "Appointment_Time","Qty_Item","Price","Procedure","HealthInsurance","Recepcionist"],
                 [1001, "2023-07-01", "9:27:03 AM" ,1, 3000, "Tomography", "Unimed", "Mary"],
@@ -272,16 +282,16 @@
         });
 
         function resetForm() {
-      // Pode adicionar outras lógicas aqui antes do reset se necessário
+      
       setTimeout(function() {
         document.getElementById('contactForm').reset();
         alert('Formulário resetado após envio');
-      }, 0); // Definido como 0 para ser executado no próximo ciclo de eventos
-      return true; // Isso permite que o formulário continue com o envio após o reset
+      }, 0); // Set to 0 to run on the next event cycle
+      return true; // This allows the form to continue submitting after reset
     }
 
         document.getElementById("downloadButton2").addEventListener("click", function() {
-            // Crie os dados da planilha
+            // Create data for excel sheet
             var data = [
                 ["Nome", "Idade", "Email"],
                 ["João", 30, "joao@example.com"],
@@ -289,25 +299,25 @@
                 ["Carlos", 35, "carlos@example.com"]
             ];
         
-            // Crie um objeto Blob que contém os dados da planilha no formato Excel
+            //  Create a Blob object that contains the spreadsheet data in Excel format
             var blob = new Blob([arrayToCSV(data)], { type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" });
         
-            // Crie uma URL temporária para o Blob
+            // Create a temporary URL for the Blob
             var url = window.URL.createObjectURL(blob);
         
-            // Crie um elemento de link para fazer o download
+            // Create a link element to download
             var a = document.createElement("a");
             a.href = url;
             a.download = "excel_sheet.csv";
             
-            // Simule o clique no link para iniciar o download
+            // Simulate the click on the link to start the download
             a.click();
         
-            // Libere a URL temporária
+            // Release the temporary URL
             window.URL.revokeObjectURL(url);
         });
         
-        // Função para converter uma matriz em formato CSV
+        // Function to convert an array to CSV format
         function arrayToCSV(data) {
             var csv = "";
             for (var row of data) {
@@ -315,6 +325,29 @@
             }
             return csv;
         }
+
+        let sidebarOpen = false;
+
+document.getElementById('toggleSidebar').addEventListener('click', function() {
+  if (!sidebarOpen) {
+    document.getElementById('sidebar').style.left = '0'; // Display the sidebar by moving left
+    document.getElementById('content').classList.add('active'); // Adds the 'active' class to the content
+    sidebarOpen = true;
+  } else {
+    document.getElementById('sidebar').style.left = '-250px'; // Hide the sidebar by moving it to the right
+    document.getElementById('content').classList.remove('active'); // Remove the 'active' class from the content
+    sidebarOpen = false;
+  }
+});
+
+// Close the sidebar when a link in the sidebar is clicked
+document.querySelectorAll('#sidebar ul li a').forEach(function(link) {
+  link.addEventListener('click', function() {
+    document.getElementById('sidebar').style.left = '-250px'; // Hide the sidebar
+    document.getElementById('content').classList.remove('active'); // Remove the 'active' class
+    sidebarOpen = false;
+  });
+});
         </script>
 
     

@@ -15,7 +15,6 @@
 <body>
     
     <!-- Header -->
-
     <header id="header" class="headerContainer">
         <div class="headerLogo">
             Y8 Analytics
@@ -34,6 +33,7 @@
         </div>
     </header>
 
+    <!-- Sidebar -->
     <div id="sidebar">
         <ul>
             <li><a href="#main">Home</a></li>
@@ -44,8 +44,7 @@
         </ul>
       </div>
 
-     <!-- Image with Title -->
-
+     <!-- Image Background -->
      <section id="main" class="main">
         <div class="back-image"></div>
 
@@ -58,7 +57,6 @@
     </section>
 
     <!-- About Us -->
-
     <section id="section-about" class="section-about">
         <div class="section-about-container">
 
@@ -113,9 +111,6 @@
                 <p> Deliver the right information to the right people via Business Intelligence (BI). <br> BI services are utilized to integrate multi-source data and automatically extract insights from the input records using advanced analytics techniques. The Y8 Analytics covers organizations’ needs in data warehousing, data quality management, reporting, and business analytics.
                 </p>
             </div>
-
-
-
             
         </div>
 
@@ -126,9 +121,7 @@
                 <h3>Data Visualization</h3>
                 <p>By understanding the data and how it can be best represented, we are able to display to stakeholders their current operations as well as the impact of their decisions.
                 </p>
-            </div>
-
-            
+            </div>   
         </div>
     </section>
 
@@ -179,7 +172,6 @@
                     </label>
                     <textarea required name="message"></textarea>
                 </div>
-                <!-- your other form fields go here -->
                 <button type="submit">Send</button>
                 </form>
             </div>
@@ -332,6 +324,7 @@
             return csv;
         }
 
+// Sidebar script
         let sidebarOpen = false;
 
 document.getElementById('toggleSidebar').addEventListener('click', function() {

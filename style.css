@@ -526,11 +526,6 @@ a:hover {
 }
 
 @media screen and (max-width: 1400px) {
-    /* .section-about-container {
-        flex-wrap: wrap;
-        height: 100%;
-    } */
-
     .about-item {
         margin-top: 100px;
     }

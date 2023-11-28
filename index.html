@@ -139,7 +139,7 @@
 
             <section class="sec-dash2">
                 <div class="dash2">
-                    <iframe class="frame2" title="Report Section" src="https://app.powerbi.com/view?r=eyJrIjoiMjJlMTdlNzAtYmU5NS00YjE2LTg5MzUtNmIwNjM1YzBiNzQyIiwidCI6ImQxOTdhM2EyLWYyZjAtNGFjYS1hZWFmLWYzNGUwMTkyM2MwYiJ9" frameborder="0" allowFullScreen="true"></iframe>
+                    <iframe class="frame2" title="Report Section" src="https://app.powerbi.com/view?r=eyJrIjoiYjc2ZDI1NmQtNTg1ZS00MTk3LWE4ZjAtYWI2Y2E5NDcwZTUxIiwidCI6ImQxOTdhM2EyLWYyZjAtNGFjYS1hZWFmLWYzNGUwMTkyM2MwYiJ9" frameborder="0" allowFullScreen="true"></iframe>
                 </div>
                 <button id="downloadButton2">Extract Data</button>
             </section>
@@ -291,11 +291,27 @@
         document.getElementById("downloadButton2").addEventListener("click", function() {
             // Create data for excel sheet
             var data = [
-                ["Nome", "Idade", "Email"],
-                ["João", 30, "joao@example.com"],
-                ["Maria", 25, "maria@example.com"],
-                ["Carlos", 35, "carlos@example.com"]
-            ];
+["Account_ID",	"Account_Status",	"Revenue_Type",	"Revenue_Category",	"Account_Type",	"Launch_Type",	"Orden_Launch_Type"],
+[500, "Inflow", "Non-operational revenue",	"Value to identify", "Non-operational",	"Revenue",	1],
+[501, "Inflow", "Non-operational revenue", "Other revenue", "Non-operational","Revenue", 1],
+[502, "Inflow", "Non-operational revenue", "Fine and interest", "Non-operational", "Revenue",	1],
+[503, "Inflow", "Non-operational revenue", "Loans and financing",	"Non-operational", "Revenue",1],
+[504, "Inflow", "Non-operational revenue", "Value to be refunded", "Non-operational",	"Revenue", 1],
+[505, "Inflow", "Non-operational revenue", "Financial investments",  "Non-operational", "Revenue", 1],
+[506, "Inflow","Operational revenue", "Services provision", "Operational",	"Revenue", 1],
+[507, "Inflow", "Operational revenue", "Maintenance service",	"Operational", "Revenue", 1],
+[508, "Inflow", "Operational revenue", "Sale of products",	"Operational", "Revenue", 1],
+[509, "Outflow", "Direct expenses", "Scotch tape", "Operational", "Variable",	3],
+[510, "Outflow", "Direct expenses", "Paper",	"Operational",	"Variable",	3],
+[511, "Outflow", "Direct expenses", "Tarpaulin", "Operational",	"Variable",	3],
+[512, "Outflow", "Direct expenses", "Accessories", "Operational", "Variable",	3],
+[513, "Outflow", "Direct expenses", "Food",	"Operational",	"Variable",	3],
+[514, "Outflow", "Fixed cost", "Electricity",	"Operational",	"Fixed", 2],
+[515, "Outflow", "Fixed cost", "Rent", "Operational", "Fixed", 2],
+[516, "Outflow", "Fixed cost", "Heat", "Operational", "Fixed", 2],
+[517, "Outflow", "Fixed cost", "Water", "Operational",	"Fixed", 2],
+[518, "Outflow", "Fixed cost", "Telecom", "Operational", "Fixed", 2]
+        ];
         
             //  Create a Blob object that contains the spreadsheet data in Excel format
             var blob = new Blob([arrayToCSV(data)], { type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" });

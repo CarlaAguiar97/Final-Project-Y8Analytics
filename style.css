@@ -247,6 +247,7 @@ a:hover {
 .service-content p {
     width: 400px;
     line-height: 30px;
+    text-align: justify;
 }
 
 /* DASHBOARDS */
